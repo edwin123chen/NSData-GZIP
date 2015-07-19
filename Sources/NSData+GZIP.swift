@@ -39,7 +39,7 @@ public extension NSData
     public func gzippedData() -> NSData?
     {
         guard self.length > 0 else {
-            return nil
+            return NSData()
         }
         
         var stream = self.createZStream()
@@ -71,7 +71,7 @@ public extension NSData
     public func gunzippedData() -> NSData?
     {
         guard self.length > 0 else {
-            return nil
+            return NSData()
         }
         
         var stream = self.createZStream()
