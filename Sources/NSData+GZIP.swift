@@ -63,7 +63,7 @@ public extension NSData
         deflateEnd(&stream)
         data.length = Int(stream.total_out)
         
-        return data
+        return NSData(data: data)
     }
     
     
@@ -99,7 +99,7 @@ public extension NSData
         
         data.length = Int(stream.total_out)
         
-        return data
+        return NSData(data: data)
     }
     
     
